@@ -1,0 +1,167 @@
+:root {
+    --primary-color: rgba(5, 90, 5, 1.000);
+    /* forest green */
+    --secondary-color: rgba(255, 255, 255, 0.8);
+    /* warm sand background */
+    --accent-color: rgba(255, 255, 255, 1.000);
+    /* white */
+    --text-color: rgba(0, 38, 77, 1.000);
+    /* solid dark blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+}
+
+/* Header */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    padding: 2rem;
+    font-size: 32px;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+    padding: 7px;
+    color: var(--text-color);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Main */
+
+main {
+    width: 95%;
+    max-width: 1700px;
+    margin: 10px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 1.5rem;
+    row-gap: 0.5rem;
+    flex: 1;
+    align-items: stretch;
+}
+
+main h1 {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+/* Cards */
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px grey;
+    height: 100%;
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card p,
+.card ul {
+    padding: 30px;
+    margin: 20px;
+}
+
+.card p {
+    line-height: 2;
+}
+
+.card p:first-of-type {
+    max-width: 75%;
+}
+
+.card h3 {
+    clear: both;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card hr {
+    width: 65%;
+    margin: 0 auto 20px auto;
+}
+
+.card ul {
+    margin: 50px;
+    margin-top: 150px;
+    padding-left: 5px;
+    line-height: 2;
+    font-size: large;
+}
+
+.card li {
+    margin: 7px;
+}
+
+/* Images */
+
+.card img:first-of-type {
+    float: right;
+    width: 160px;
+    margin: 25px 50px;
+}
+
+.card img:last-of-type {
+    float: left;
+    max-width: 150px;
+    margin: 0 25px 10px 20px;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 10px;
+}
+
+#lastModified {
+    color: yellow;
+}
