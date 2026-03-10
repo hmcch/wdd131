@@ -4,11 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Héctor Miguel Castro Chávez</title>
+
+    <meta name="description"
+        content="WDD 131 | Dynamic Web Fundamentals, project owned by Héctor Miguel Castro Chávez. This page contains the basic HTML structure (header, main, footer elements and basic javascript functionalities).">
+    <meta name="author" content="Héctor Miguel Castro Chávez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <h1>WDD 131 - HC</h1>
+    <header>
+        <h2>
+            <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+        </h2>
+
+        <nav>
+            <a href="https://www.linkedin.com">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Héctor Miguel Castro Chávez</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/profile-opt.webp" alt="Photo of Héctor Miguel Castro Chávez" width="150">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quae maxime asperiores, vitae laborum
+                id iure cum perspiciatis blanditiis. Tempora iste officiis velit! Laboriosam quam, vero nemo veniam nam
+                maxime quisquam sint corporis aspernatur doloremque fugit minus adipisci ratione blanditiis unde
+                explicabo? Nemo, expedita neque doloremque unde laudantium iure reiciendis soluta quas, debitis
+                accusantium quia asperiores, quod possimus amet totam provident vel sit cupiditate itaque mollitia
+                tempore natus? Quia harum rerum quasi vero porro minus fuga velit molestias voluptatum voluptate
+                consequuntur ab modi, totam accusamus aspernatur amet voluptatem reiciendis distinctio neque
+                reprehenderit aliquam nulla. Nobis odio dolores suscipit voluptatem corporis.
+            </p>
+            <h3>Mexico City, Mexico</h3>
+            <hr>
+            <img src="images/mexican-flag-op.webp" alt="Official flag of Mexico" width="150">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque earum numquam hic harum dolorem totam
+                corrupti ex quisquam veniam iure mollitia eos, delectus sequi optio eligendi quo repellendus
+                voluptatibus saepe, culpa aliquam consectetur sunt. Dolor earum sequi suscipit eligendi numquam totam
+                fuga ratione, error excepturi, perferendis et aspernatur, ex odit. Expedita nostrum autem assumenda
+                repudiandae harum eaque corporis alias laboriosam in.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://dev.to" target="_blank">DEV Community</a></li>
+                <li><a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a></li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> 🦅 Héctor Miguel Castro Chávez 🦅 Mexico
+        </p>
+
+        <p id="lastModified">Last Modification</p>
+    </footer>
+
 </body>
 
 </html>

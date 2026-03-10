@@ -5,6 +5,7 @@
     /* warm sand background */
     --accent-color: rgba(255, 255, 255, 1.000);
     /* white */
+    --accent-color-2: rgba(204, 255, 0, 1);
     --text-color: rgba(0, 38, 77, 1.000);
     /* solid dark blue */
 }
@@ -43,7 +44,7 @@ nav {
     display: flex;
     justify-content: space-around;
     background-color: var(--secondary-color);
-    padding: 7px;
+    padding: 10px;
     color: var(--text-color);
 }
 
@@ -51,7 +52,7 @@ nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 700;
-    padding: 12px;
+    padding: 15px;
     display: block;
     width: 100%;
     text-align: center;
@@ -157,11 +158,13 @@ main h1 {
 
 footer {
     background-color: var(--primary-color);
+    padding: 15px;
     color: var(--accent-color);
     text-align: center;
-    padding: 10px;
+
 }
 
 #lastModified {
-    color: yellow;
+    text-shadow: 1px 1px 0 yellowgreen, -1px -1px 0 yellowgreen;
+    color: var(--accent-color-2);
 }
