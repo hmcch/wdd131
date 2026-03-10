@@ -165,6 +165,6 @@ footer {
 }
 
 #lastModified {
-    text-shadow: 1px 1px 0 yellowgreen, -1px -1px 0 yellowgreen;
+    text-shadow: 1px 1px 0 yellow, -1px -1px 0 yellow;
     color: var(--accent-color-2);
 }
