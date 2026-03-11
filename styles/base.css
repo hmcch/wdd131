@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
@@ -73,11 +73,6 @@ main {
     align-items: stretch;
 }
 
-main h1 {
-    grid-column: 1 / 3;
-    text-align: center;
-    margin: 1.3rem 0 1.3rem 0;
-}
 
 .card {
     border: 1px solid var(--text-color);
@@ -85,6 +80,16 @@ main h1 {
     overflow: hidden;
     box-shadow: 0 0.2rem 3.5rem var(--secondary-color);
     height: 100%;
+}
+
+main h1 {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin: 1.3rem 0 1.3rem 0;
+}
+
+.card p {
+    line-height: 2;
 }
 
 .card h2 {
@@ -100,22 +105,39 @@ main h1 {
     margin: 2rem;
 }
 
-.card p {
-    line-height: 2;
-}
-
-.card p:first-of-type {
-    max-width: 70%;
-}
-
 .card h3 {
-    clear: right;
+    clear: both;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
 
+.card p:first-of-type {
+    max-width: 70%;
+}
+
+.card ul {
+    margin: 3.2rem;
+    margin-top: 9rem;
+    padding-left: 0.2rem;
+    line-height: 2;
+    font-size: large;
+}
+
+
+.card li {
+    margin: 0.4rem;
+}
+
+.card img:first-of-type {
+    border-radius: 10px;
+    border: 10px solid transparent;
+    float: right;
+    width: 180px;
+    height: auto;
+    margin: 25px 50px;
+}
 
 .card hr {
     display: block;
@@ -131,33 +153,13 @@ main h1 {
     margin-bottom: 40px;
 }
 
-.card ul {
-    margin: 3.2rem;
-    margin-top: 9rem;
-    padding-left: 0.2rem;
-    line-height: 2;
-    font-size: large;
-}
-
-.card li {
-    margin: 0.4rem;
-}
-
-.card img:first-of-type {
-    border-radius: 10px;
-    border: 10px solid transparent;
-    float: right;
-    width: 180px;
-    height: auto;
-    margin: 25px 50px;
-}
-
 .card img:last-of-type {
     float: left;
     width: 220px;
     height: auto;
     margin: 0 25px 10px 20px;
 }
+
 
 footer {
     text-align: center;
