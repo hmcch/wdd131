@@ -5,3 +5,7 @@ const li = document.createElement('li');// the variable name does not have to ma
 const deleteButton = document.createElement('button');//create delete button
 li.textContent = input.value;//Populate the li element variable's textContent or innerHTML with the input value
 deleteButton.textContent = '❌';// Set the delete button's textContent to ❌
+li.append(deleteButton);//Append the delete button to the li element
+list.append(li);
+<button aria-label="Close" id="close-button">❌</button>
+//To help screen readers understand the button's purpose.
