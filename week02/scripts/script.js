@@ -9,3 +9,6 @@ li.append(deleteButton);//Append the delete button to the li element
 list.append(li);
 <button aria-label="Close" id="close-button">❌</button>
 //To help screen readers understand the button's purpose.
+button.addEventListener('click', function () {
+    if (input.value.trim() !== '') {...}
+});

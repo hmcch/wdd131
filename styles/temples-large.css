@@ -1,0 +1,39 @@
+:root {
+    --primary-color: rgba(5, 90, 5, 1.000);
+    /* forest green */
+    --secondary-color: rgba(255, 255, 255, 0.8);
+    /* warm sand background */
+    --accent-color: rgba(255, 255, 255, 1.000);
+    /* white */
+    --accent-color-2: rgba(204, 255, 0, 1);
+    --text-color: rgba(0, 38, 77, 1.000);
+    /* solid dark blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 2rem;
+}
+
+
+
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 15px;
+    color: var(--accent-color);
+
+}
+
+#lastModified {
+    color: var(--accent-color-2);
+}
