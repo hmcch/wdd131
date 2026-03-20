@@ -44,7 +44,7 @@ header {
     font-weight: 700;
 }
 
-#nav {
+#navigation {
     font-size: 32px;
     background: none;
     border: none;
@@ -64,7 +64,9 @@ nav {
     text-align: center;
 }
 
-/* .navigation.open */
+.navigation-menu.open {
+    display: block;
+}
 
 .navigation-menu li {
     border-top: 1px solid var(--overlay-color);
