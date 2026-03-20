@@ -13,13 +13,11 @@
         align-items: center;
     }
 
-
     nav {
         display: flex;
         justify-content: flex-end;
         padding-right: 18px;
     }
-
 
     .navigation-menu {
         display: flex;
@@ -42,8 +40,6 @@
         padding: 10px 25px;
     }
 
-
-
     main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -51,20 +47,14 @@
         align-items: start;
     }
 
-
-
     main h1 {
         grid-column: 1/-1;
         margin-bottom: 12px;
     }
 
-
-
     figure {
         margin-bottom: 0;
     }
-
-
 
     figure img {
         max-width: 100%;
