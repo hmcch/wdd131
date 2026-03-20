@@ -10,6 +10,8 @@
     /* solid dark blue */
     --overlay-color: rgba(0, 0, 0, 1);
     /* african turquoise */
+    --overlay-color-2: rgba(189, 214, 239, 1);
+    /* Sensational Light Blue */
 }
 
 * {
@@ -48,7 +50,7 @@ header {
     font-size: 32px;
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--overlay-color-2);
     cursor: pointer;
 }
 
