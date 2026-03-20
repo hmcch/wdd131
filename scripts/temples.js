@@ -1,7 +1,7 @@
 const menuButton = document.getElementById('navigation');
 const navigation = document.querySelector('.navigation-menu');
 const lastModified = document.querySelector('#lastModified');
-const currentYar = document.getElementById('#currentyear');
+const currentYear = document.getElementById('currentyear');
 
 menuButton.addEventListener('click', () => {
     if (navigation.classList.contains('open')) {
