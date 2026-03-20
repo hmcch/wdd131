@@ -81,7 +81,7 @@ nav {
 }
 
 .navigation-menu li {
-    border-top: 1px solid var(--overlay-color);
+    border-top: none;
 }
 
 .navigation-menu a {
@@ -89,7 +89,7 @@ nav {
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding: 16px;
+    padding: 12px;
     text-decoration: none;
     color: var(--accent-color);
     font-weight: 700;
