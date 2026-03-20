@@ -85,7 +85,6 @@ nav {
 }
 
 .navigation-menu a {
-    /* display: block; */
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -121,7 +120,6 @@ figure img {
     width: 100%;
     max-width: 560px;
     height: auto;
-    /* display: block; */
     margin: 0 auto;
 }
 
