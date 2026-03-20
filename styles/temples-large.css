@@ -28,13 +28,6 @@
         padding-right: 18px;
     }
 
-    .navigation-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        gap: 26px;
-    }
-
     .navigation-menu ul {
         display: flex;
         flex-direction: row;
