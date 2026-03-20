@@ -84,8 +84,9 @@ nav {
 }
 
 .navigation-menu a {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    display: block;
     list-style: none;
     padding: 12px;
     text-decoration: none;
@@ -102,6 +103,7 @@ main {
     max-width: 900px;
     margin: 0 auto;
     padding: 24px 16px;
+    width: 100%;
 }
 
 main h1 {
