@@ -44,20 +44,20 @@
     }
 
     .data h2 {
-        background-color: rgb(49, 158, 82);
+        background-color: rgb(200, 235, 210);
         width: 250px;
         margin: 0 0 1.5rem;
         padding: .8rem;
-        color: var(--text-color);
+        color: #0a0d0f;
         border-radius: 5px;
     }
 
     .weather h2 {
-        background-color: rgb(49, 158, 82);
+        background-color: rgb(200, 235, 210);
         width: 250px;
         margin: 0 0 1.5rem;
         padding: .8rem;
-        color: var(--text-color);
+        color: #0a0d0f;
         border-radius: 5px;
     }
 
