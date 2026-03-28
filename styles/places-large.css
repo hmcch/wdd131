@@ -66,6 +66,8 @@
         right: 1rem;
         background-color: var(--overlay-color-2);
         padding: .5rem 1rem 0;
+        border: 2px solid var(--primary-color);
+        border-radius: 8px;
     }
 
     .weather ul {
