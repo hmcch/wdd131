@@ -102,13 +102,13 @@ h1 {
     display: contents
 }
 
-.data-label {
+.data-info {
     font-weight: 700;
     grid-column: 1;
     text-align: right;
 }
 
-.data-information {
+.data-details {
     grid-column: 2;
     text-align: left;
 }
