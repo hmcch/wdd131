@@ -46,7 +46,8 @@
     .data h2 {
         background-color: var(--overlay-color-3);
         width: 250px;
-        margin: 0;
+        /* margin: 0; */
+        margin: 0 0 1.5rem;
         padding: .8rem;
         color: var(--text-color);
         border-radius: 5px;
@@ -55,7 +56,8 @@
     .weather h2 {
         background-color: var(--overlay-color-3);
         width: 250px;
-        margin: 0;
+        /* margin: 0; */
+        margin: 0 0 1.5rem;
         padding: .8rem;
         color: var(--text-color);
         border-radius: 5px;
