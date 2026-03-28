@@ -12,7 +12,8 @@
     /* african turquoise */
     --overlay-color-2: rgba(189, 214, 239, 1);
     /* Sensational Light Blue */
-    --overlay-color-3: rgba(238, 88, 88, 1);
+    --overlay-color-3: rgba(49, 158, 82, 1.000)
+        /* Retro Green */
 }
 
 * {

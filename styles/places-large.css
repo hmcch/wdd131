@@ -44,7 +44,7 @@
     }
 
     .data h2 {
-        background-color: var(--primary-color);
+        background-color: rgb(49, 158, 82);
         width: 250px;
         margin: 0 0 1.5rem;
         padding: .8rem;
@@ -53,7 +53,7 @@
     }
 
     .weather h2 {
-        background-color: var(--overlay-color-3);
+        background-color: rgb(49, 158, 82);
         width: 250px;
         margin: 0 0 1.5rem;
         padding: .8rem;
