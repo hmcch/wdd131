@@ -1,0 +1,139 @@
+:root {
+    --primary-color: rgba(5, 90, 5, 1.000);
+    /* forest green */
+    --secondary-color: rgba(255, 255, 255, 0.8);
+    /* warm sand background */
+    --accent-color: rgba(255, 255, 255, 1.000);
+    /* white */
+    --accent-color-2: rgba(204, 255, 0, 1);
+    --text-color: rgba(0, 38, 77, 1.000);
+    /* solid dark blue */
+    --overlay-color: rgba(0, 0, 0, 1);
+    /* african turquoise */
+    --overlay-color-2: rgba(189, 214, 239, 1);
+    /* Sensational Light Blue */
+    --overlay-color-3: rgba(238, 88, 88, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding-bottom: 16px;
+}
+
+h1 {
+    margin: 0;
+    padding: 26px;
+    text-align: center;
+    color: var(--accent-color);
+    width: 100%;
+}
+
+.hero {
+    background-color: var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100vh;
+    /* height: calc(100vh - 110px); */
+    /* aspect-ratio: 4 / 3; */
+    /* height: calc(100vh - 110px); */
+    object-fit: cover;
+    object-position: center;
+}
+
+.data {
+    border-bottom: 1px solid var(--overlay-color-2);
+}
+
+.data h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.weather h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.data ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.weather ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.data ul li {
+    display: contents;
+}
+
+.weather ul li {
+    display: contents
+}
+
+.data-label {
+    font-weight: 700;
+    grid-column: 1;
+    text-align: right;
+}
+
+.data-information {
+    grid-column: 2;
+    text-align: left;
+}
+
+.weather-icon {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.weather img {
+    width: 50px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
+    color: var(--accent-color);
+    font-size: 20px;
+    text-align: center;
+}
+
+footer p:last-child {
+    margin-top: 8px;
+}

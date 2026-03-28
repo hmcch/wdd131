@@ -15,18 +15,70 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/places.css">
+    <link rel="stylesheet" href="styles/places-large.css">
     <link rel="icon" href="data:,"><!--Its valid HTML5 and prevents browsers to always look for the /favicon.ico.-->
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <h1>Mexico</h1>
+    </header>
     <main>
-
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/golden-eagle-large-opt.webp">
+                <source media="(min-width: 640px)" srcset="images/golden-eagle-medium-opt.webp">
+                <img src="images/golden-eagle-small-opt.webp" alt="Golden Eagle">
+            </picture>
+        </section>
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li>
+                    <span class="data-label">Area: </span>
+                    <span class="data-information">1.964 million sq km</span>
+                </li>
+                <li><span class="data-label">Population: </span><span class="data-information"> 132.7 million<< /span>
+                </li>
+                <li><span class="data-label">Capital: </span><span class="data-information"> Mexico City</span></li>
+                <li><span class="data-label">Languages: </span><span class="data-information"> Spanish</span></li>
+                <li><span class="data-label">Currency: </span><span class="data-information"> Mexican Peso</span></li>
+                <li><span class="data-label">Time Zone: </span><span class="data-information"> GMT-06</span></li>
+                <li><span class="data-label">Calling Code: </span><span class="data-information">+52</span></li>
+                <li><span class="data-label">Internet TLD: </span><span class="data-information">.mx</span></li>
+            </ul>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather__icon">
+                <img src="images/weather-icon-or.svg" alt="Weather slightly cloudly icon">
+            </div>
+            <ul>
+                <li>
+                    <span class="data-label">Temperature: </span>
+                    <span class="data-information"><span id="temperature">8</span> ºC</span>
+                </li>
+                <li><span class="data-label">Conditions: </span><span class="data-information">Partly cloudy</span></li>
+                <li><span class="data-label">Wind: </span><span class="data-information"><span
+                            id="windSpeed">9,72</span>
+                        km/h</span></li>
+                <li>
+                    <span class="data-label">Wind Chill: </span>
+                    <span class="data-information">
+                        <span id="windChill"></span>
+                    </span>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-
+        <p class="footer">
+            &copy; <span id="currentyear"></span> 🦅 Héctor Miguel Castro Chávez 🦅 Mexico
+        </p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
