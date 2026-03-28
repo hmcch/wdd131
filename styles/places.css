@@ -118,8 +118,19 @@ h1 {
     margin-bottom: 34px;
 }
 
+.weather__icon {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+}
+
 .weather img {
     width: 50px;
+}
+
+.weather__icon img {
+    width: 80px;
+    height: auto;
 }
 
 footer {
