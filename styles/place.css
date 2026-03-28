@@ -1,0 +1,21 @@
+:root {
+    --primary-color: rgba(5, 90, 5, 1.000);
+    /* forest green */
+    --secondary-color: rgba(255, 255, 255, 0.8);
+    /* warm sand background */
+    --accent-color: rgba(255, 255, 255, 1.000);
+    /* white */
+    --accent-color-2: rgba(204, 255, 0, 1);
+    --text-color: rgba(0, 38, 77, 1.000);
+    /* solid dark blue */
+    --overlay-color: rgba(0, 0, 0, 1);
+    /* african turquoise */
+    --overlay-color-2: rgba(189, 214, 239, 1);
+    /* Sensational Light Blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
