@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description"
+        content="WDD 131 | Dynamic Web Fundamentals: A temple album by Héctor Miguel Castro Chávez. Basic HTML structure (header, main, footer) and JS functionalities.">
+    <meta name="author" content="Héctor Miguel Castro Chávez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <link rel="icon" href="data:,"><!--Its valid HTML5 and prevents browsers to always look for the /favicon.ico.-->
+    <script src="scripts/filtered-temples.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="starting-point">
+            <span class="website-title">Temple Album</span>
+            <button id="navigation" type="button" aria-label="Menu">☰</button>
+        </div>
+
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Album</h1>
+    </main>
+
+    <footer>
+        <p class="footer">
+            &copy; <span id="currentyear"></span> 🦅 Héctor Miguel Castro Chávez 🦅 Mexico
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
