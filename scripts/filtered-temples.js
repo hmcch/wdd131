@@ -129,7 +129,7 @@ function createCard(filteredTemples) {
         location = `${location.at(0)}, ${location.at(-1)}`;
 
         let dedication = temple.dedicated.split(",");
-        dedication = `${dedication.at(1)}, ${dedication.at(0)}`
+        dedication = `${dedication.at(1)} ${dedication.at(2)}, ${dedication.at(0)}`
 
         templeInformations.innerHTML = `<ul>
       <li>
