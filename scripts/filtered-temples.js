@@ -191,7 +191,7 @@ oldLink.addEventListener("click", (event) => {
         let templeDedication = parseInt(temple.dedicated.split(",")[0]);
         return templeDedication < 1900;
     });
-    // debugger;
+
     createCard(oldTemples);
 });
 
@@ -209,7 +209,7 @@ newLink.addEventListener("click", (event) => {
         let templeDedication = parseInt(temple.dedicated.split(",")[0]);
         return templeDedication > 2000;
     });
-    // debugger;
+
     createCard(newTemples);
 });
 
@@ -227,7 +227,7 @@ largeLink.addEventListener("click", (event) => {
         let area = temple.area;
         return area > 90000;
     });
-    // debugger;
+
     createCard(largeTemples);
 });
 
@@ -248,94 +248,3 @@ smallLink.addEventListener("click", (event) => {
 
     createCard(smallTemples);
 });
-
-// const menuButton = document.getElementById('navigation');
-// const navigation = document.querySelector('.navigation-menu');
-// const lastModified = document.querySelector('#lastModified');
-// const currentYear = document.getElementById('currentyear');
-// const main = document.querySelector('main');
-
-// menuButton.addEventListener('click', () => {
-//     if (navigation.classList.contains('open')) {
-//         navigation.classList.remove('open');
-//         menuButton.textContent = '☰'
-//     }
-
-//     else {
-//         navigation.classList.add('open');
-//         menuButton.textContent = 'X';
-
-//     }
-// });
-
-// function displayTemples(temples) {
-//     main.innerHTML = "<h1>Temple Album</h1>";
-
-//     const grid = document.createElement('div');
-//     grid.classList.add('temple-grid');
-// }
-
-// temples.forEach((temple) => {
-//     const card = document.createElement('section');
-//     const name = document.createElement('h3');
-//     const location = document.createElement('p');
-//     const dedicated = document.createElement('p');
-//     const area = document.createElement('p');
-//     const image = document.createElement('img');
-
-//     name.textContent = temple.templeName;
-//     location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-//     dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-//     area.innerHTML = `<span class="label">Size:</span> ${temple.area.toLocaleString()} sq ft`;
-
-//     image.setAttribute('src', temple.imageUrl);
-//     image.setAttribute('alt', temple.templeName);
-//     image.setAttribute('loading', 'lazy');
-//     image.setAttribute('width', '400');
-//     image.setAttribute('height', '250');
-
-//     card.appendChild(name);
-//     card.appendChild(location);
-//     card.appendChild(dedicated);
-//     card.appendChild(area);
-//     card.appendChild(image);
-
-//     main.appendChild(card);
-// });
-
-// displayTemples(temples);
-
-// document.querySelector('#home').addEventListener('click', () => {
-//     displayTemples(temples);
-// });
-
-// document.querySelector('#old').addEventListener('click', () => {
-//     const oldTemples = temples.filter((temple) => {
-//         return Number(temple.dedicated.split(',')[0]) < 1900;
-//     });
-//     displayTemples(oldTemples);
-// });
-
-// document.querySelector('#new').addEventListener('click', () => {
-//     const newTemples = temples.filter((temple) => {
-//         return Number(temple.dedicated.split(',')[0]) > 2000;
-//     });
-//     displayTemples(newTemples);
-// });
-
-// document.querySelector('#large').addEventListener('click', () => {
-//     const largeTemples = temples.filter((temple) => {
-//         return temple.area > 90000;
-//     });
-//     displayTemples(largeTemples);
-// });
-
-// document.querySelector('#small').addEventListener('click', () => {
-//     const smallTemples = temples.filter((temple) => {
-//         return temple.area < 10000;
-//     });
-//     displayTemples(smallTemples);
-// });
-
-// document.getElementById("currentyear").textContent = new Date().getFullYear();
-// document.getElementById("lastModified").innerHTML = `Last Modified: ${document.lastModified}`;
