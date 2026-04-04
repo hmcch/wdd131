@@ -10,7 +10,7 @@
     --main: rgba(184, 193, 236, 1);
     --highlight: rgba(238, 187, 195, 1);
     --secondary: rgba(255, 255, 255, 1.000);
-    --tertiary: rgba(238, 187, 195, 1);
+    --tertiary: rgba(255, 255, 255, 1.000);
 }
 
 * {
