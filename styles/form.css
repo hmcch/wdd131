@@ -1,0 +1,194 @@
+:root {
+    --primary-color: rgba(5, 90, 5, 1.000);
+    /* forest green */
+    --secondary-color: rgba(255, 255, 255, 0.8);
+    /* warm sand background */
+    --accent-color: rgba(255, 255, 255, 1.000);
+    /* white */
+    --accent-color-2: rgba(204, 255, 0, 1);
+    --accent-color-3: rgba(200, 235, 210, 1.000);
+    --text-color: rgba(0, 38, 77, 1.000);
+    /* solid dark blue */
+    --text-color-2: rgba(10, 13, 15, 1.000);
+    --overlay-color: rgba(0, 0, 0, 1);
+    /* african turquoise */
+    --overlay-color-2: rgba(189, 214, 239, 1);
+    /* Sensational Light Blue */
+    --overlay-color-3: rgba(49, 158, 82, 1.000)
+        /* Retro Green */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: var(--secondary-color);
+}
+
+/* Header */
+header {
+    max-width: 50rem;
+    margin: 1.25rem auto 0;
+    background-color: var(--primary-color);
+}
+
+header h1 {
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1.12rem;
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+/* Form */
+main {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+form {
+    background-color: var(--secondary-color);
+    padding: 1.12rem;
+}
+
+/* Labels */
+label,
+legend {
+    font-weight: bold;
+    font-size: 1.12rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+label span {
+    font-style: normal;
+    color: var(--text-color);
+}
+
+/* Inputs */
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.63rem;
+    margin-bottom: 16px;
+    border: 1px solid var(--text-color);
+    font-size: 1rem;
+}
+
+select {
+    height: 3.25rem;
+    padding: 0.75rem 0.88rem;
+    font-size: 1.07rem
+}
+
+/* Textarea */
+textarea {
+    height: 13.8rem;
+    resize: none;
+}
+
+/* Fieldset */
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+/* Rating */
+.rating-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.rating-option {
+    text-align: center;
+    flex: 1;
+}
+
+.rating-option label {
+    display: block;
+    font-size: 1.12rem;
+    font-weight: normal;
+    margin-bottom: 0.25rem;
+}
+
+.rating-option input {
+    width: 1.12rem;
+    height: 1.12rem;
+}
+
+/* Checkboxes */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+/* Optional text */
+span {
+    font-weight: normal;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Button */
+input[type="submit"] {
+    width: 100%;
+    padding: 0.88rem;
+    font-size: 1.38rem;
+    font-weight: bold;
+    border: 1px solid var(--text-color);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    max-width: 50rem;
+    margin: 0 auto 1.25rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 0.88rem;
+}
+
+footer p {
+    margin: 0.32rem;
+    font-size: 1rem;
+    padding: 0.32rem;
+}
+
+header,
+main,
+footer {
+    padding: 0.62rem;
+}
+
+/* Media */
+
+@media screen and (min-width: 700px) {
+
+    header,
+    main,
+    footer {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    form {
+        padding: 30px;
+    }
+}
