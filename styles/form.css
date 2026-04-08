@@ -16,7 +16,7 @@
 
 body {
     margin: 0;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: system-ui, sans-serif;
     font-display: swap;
     background-color: var(--secondary-color);
 }
