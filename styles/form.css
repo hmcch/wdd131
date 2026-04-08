@@ -20,7 +20,6 @@ body {
     background-color: var(--secondary-color);
 }
 
-/* Header */
 header {
     max-width: 50rem;
     margin: 1.25rem auto 0;
