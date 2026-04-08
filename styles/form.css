@@ -50,7 +50,7 @@ main {
 }
 
 form {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color-3);
     padding: 1.12rem;
 }
 
