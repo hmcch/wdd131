@@ -5,17 +5,9 @@
     /* warm sand background */
     --accent-color: rgba(255, 255, 255, 1.000);
     /* white */
-    --accent-color-2: rgba(204, 255, 0, 1);
     --accent-color-3: rgba(200, 235, 210, 1.000);
     --text-color: rgba(0, 38, 77, 1.000);
     /* solid dark blue */
-    --text-color-2: rgba(10, 13, 15, 1.000);
-    --overlay-color: rgba(0, 0, 0, 1);
-    /* african turquoise */
-    --overlay-color-2: rgba(189, 214, 239, 1);
-    /* Sensational Light Blue */
-    --overlay-color-3: rgba(49, 158, 82, 1.000)
-        /* Retro Green */
 }
 
 * {
