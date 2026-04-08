@@ -24,7 +24,7 @@
 
 body {
     margin: 0;
-    font-family: 'Inter', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Inter', Haettenschweiler, sans-serif;
     background-color: var(--secondary-color);
 }
 
