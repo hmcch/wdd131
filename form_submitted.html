@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted</title>
+    <meta name="description"
+        content="Contains a visual confirmation to let the user know the information was submitted successfully">
+    <meta name="author" content="Héctor Miguel Castro Chávez">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Form Submitted</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Thank you sending your request.</h2>
+            <p>Your review form has been submitted successfully.</p>
+            <p id="count-number"></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2026 🦅 Héctor Miguel Castro Chávez 🦅 Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        let count = localStorage.getItem("reviewCount");
+
+        if (!count) {
+            count = 0;
+        }
+
+        count++;
+
+        localStorage.setItem("reviewCount", count);
+
+        document.getElementById("count-number").textContent =
+            "Total reviews submitted: " + count;
+
+        document.getElementById("lastModified").textContent =
+            "Last Modified: " + document.lastModified;
+    </script>
+</body>
+
+</html>
