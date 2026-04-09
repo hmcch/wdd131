@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #39c096;
+    --secondary-color: #fffff2;
+    --accent-color: #111827;
+    --heading-font: "Raleway", serif;
+    --body-font: "Raleway", sans-serif;
+    --accent-font: "Raleway", cursive;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--secondary-color);
+    color: #333;
+    line-height: 1.6;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    margin: 0;
+    color: #222;
+}
+
+.logo-name {
+    font-family: var(--accent-font);
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    color: var(--accent-color);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: #ffffff;
+    margin: 1rem 0;
+    padding: 1.25rem;
+    border-left: 8px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+.color-box {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.green {
+    background-color: var(--primary-color);
+}
+
+.milky {
+    background-color: #fffff2;
+}
+
+.black {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.raleway-1 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+}
+
+.raleway-2 {
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+}
+
+.raleway-3 {
+    font-family: var(--accent-font);
+    font-size: 1.3rem;
+}
+
+.wireframe {
+    border: 2px solid var(--accent-color);
+    padding: 1rem;
+    background-color: #fafafa;
+}
+
+.wireframe p {
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: 4px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (min-width: 720px) {
+    .desktop-wireframe {
+        display: grid;
+        gap: 12px
+    }
+}
