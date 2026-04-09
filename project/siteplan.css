@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f3f3f3;
+    padding: 20px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+    color: #8a5a44;
+    font-weight: 600;
+}
+
+.container {
+    border: 2px dashed #c58c6b;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.block {
+    background: #d8a7b8;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Desktop layout */
+.desktop .row {
+    display: flex;
+    gap: 12px;
+}
+
+.desktop .row .block {
+    flex: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile {
+        display: none;
+    }
+}
