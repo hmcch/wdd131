@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #059669;
+    --primary-color: #39c096;
     --secondary-color: #fffff2;
-    --accent-color: #050000;
+    --accent-color: #111827;
     --heading-font: "Raleway", serif;
-    --body-font: "Arial", sans-serif;
-    --accent-font: "Times New Roman", cursive;
+    --body-font: "Raleway", sans-serif;
+    --accent-font: "Raleway", cursive;
 }
 
 * {
@@ -67,33 +67,33 @@ ul {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 6px;
-    border: 1px solid #050000;
-}
-
-.soothing {
-    background-color: #d1d5db;
+    border: 1px solid #ccc;
 }
 
 .green {
-    background-color: #059669;
+    background-color: var(--primary-color);
 }
 
-.darkest {
-    background-color: #050000;
+.milky {
+    background-color: #fffff2;
+}
+
+.black {
+    background-color: var(--accent-color);
     color: white;
 }
 
-.playfair {
+.raleway-1 {
     font-family: var(--heading-font);
     font-size: 1.2rem;
 }
 
-.roboto {
+.raleway-2 {
     font-family: var(--body-font);
     font-size: 1.1rem;
 }
 
-.pacifico {
+.raleway-3 {
     font-family: var(--accent-font);
     font-size: 1.3rem;
 }
@@ -116,9 +116,9 @@ footer p {
     margin: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
     .desktop-wireframe {
         display: grid;
-        gap: 0.75rem
+        gap: 12px
     }
 }
