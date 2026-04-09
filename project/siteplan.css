@@ -47,7 +47,7 @@ h2 {
 }
 
 /* Responsive behavior */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .desktop {
         display: none;
     }
@@ -57,4 +57,4 @@ h2 {
     .mobile {
         display: none;
     }
-}
+} */
