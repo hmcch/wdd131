@@ -1,60 +1,124 @@
+:root {
+    --primary-color: #059669;
+    --secondary-color: #fffff2;
+    --accent-color: #050000;
+    --heading-font: "Raleway", serif;
+    --body-font: "Arial", sans-serif;
+    --accent-font: "Times New Roman", cursive;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: #f3f3f3;
-    padding: 20px;
-}
-
-h2 {
-    margin: 20px 0 10px;
-    color: #8a5a44;
-    font-weight: 600;
-}
-
-.container {
-    border: 2px solid #c58c6b;
-    padding: 20px;
-    margin-bottom: 40px;
-}
-
-.block {
-    background: #d8a7b8;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 12px;
-    border-radius: 6px;
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--secondary-color);
     color: #333;
-    font-weight: 500;
+    line-height: 1.6;
 }
 
-/* Desktop layout */
-.desktop .row {
-    display: flex;
-    gap: 12px;
+header,
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
 }
 
-.desktop .row .block {
-    flex: 1;
+header h1 {
+    font-family: var(--heading-font);
+    margin: 0;
+    color: #222;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+.logo-name {
+    font-family: var(--accent-font);
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    color: var(--accent-color);
 }
 
-/* Responsive behavior */
-/* @media (max-width: 768px) {
-    .desktop {
-        display: none;
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: #ffffff;
+    margin: 1rem 0;
+    padding: 1.25rem;
+    border-left: 8px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+.color-box {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    border: 1px solid #050000;
+}
+
+.soothing {
+    background-color: #d1d5db;
+}
+
+.green {
+    background-color: #059669;
+}
+
+.darkest {
+    background-color: #050000;
+    color: white;
+}
+
+.playfair {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+}
+
+.roboto {
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+}
+
+.pacifico {
+    font-family: var(--accent-font);
+    font-size: 1.3rem;
+}
+
+.wireframe {
+    border: 2px solid var(--accent-color);
+    padding: 1rem;
+    background-color: #fafafa;
+}
+
+.wireframe p {
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: 4px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-wireframe {
+        display: grid;
+        gap: 0.75rem
     }
 }
-
-@media (min-width: 769px) {
-    .mobile {
-        display: none;
-    }
-} */
