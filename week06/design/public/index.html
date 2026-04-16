@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bike Club Eterna Primavera - Morelos, Mexico</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #059669;
+            --color-primary-dark: #047857;
+            --color-primary-light: #10b981;
+            --color-text: #1f2937;
+            --color-text-light: #6b7280;
+            --color-bg: #ffffff;
+            --color-bg-gray: #f9fafb;
+            --color-border: #e5e7eb;
+            --color-success: #10b981;
+            --color-error: #ef4444;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+        }
+
+        .container {
+            max-width: 1280px;
+            font-family: ;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .container-small {
+            max-width: 896px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .required {
+            color: var(--color-error);
+        }
+
+        /* Header */
+        #header {
+            background-color: var(--color-primary);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-title {
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .desktop-nav {
+            display: none;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s;
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-icon,
+        .close-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .mobile-nav {
+            padding-bottom: 1rem;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        /* Pages */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #047857 100%);
+            color: white;
+            padding: 5rem 0 7rem;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 768px;
+        }
+
+        .welcome-badge {
+            display: inline-block;
+            background-color: rgba(16, 185, 129, 0.3);
+            backdrop-filter: blur(8px);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--color-primary-dark);
+        }
+
+        .btn-primary:hover {
+            background-color: #f0fdf4;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--color-text-light);
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #d1fae5;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: var(--color-text-light);
+            font-size: 0.875rem;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 4rem 0;
+            background-color: var(--color-bg-gray);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .about-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .about-text {
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+
+        .about-ready {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+
+        .about-ready svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-value {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--color-text-light);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 56rem;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        /* Page Header */
+        .page-header {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .page-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .page-description {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 48rem;
+        }
+
+        /* Filters Section */
+        .filters-section {
+            background-color: white;
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.5rem 0;
+        }
+
+        .filters-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .filters-container {
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+        }
+
+        .filters-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex: 1;
+        }
+
+        @media (min-width: 640px) {
+            .filters-row {
+                flex-direction: row;
+            }
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .filter-select,
+        .form-select {
+            width: 100%;
+            padding: 0.625rem 0.75rem;
+            border: 1px solid var(--color-border);
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .filter-select:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+        }
+
+        .filter-results {
+            margin-top: 1rem;
+        }
+
+        .filter-results p {
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+        }
+
+        /* Routes Section */
+        .routes-section {
+            padding: 3rem 0;
+        }
+
+        .routes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .routes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .routes-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .route-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .route-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .route-image-container {
+            position: relative;
+            height: 192px;
+            overflow: hidden;
+        }
+
+        .route-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .route-card:hover .route-image {
+            transform: scale(1.05);
+        }
+
+        .route-badge {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .badge-easy {
+            background-color: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+
+        .badge-moderate {
+            background-color: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+        }
+
+        .badge-challenging {
+            background-color: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        .route-content {
+            padding: 1.5rem;
+        }
+
+        .route-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .route-location {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--color-text-light);
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .route-location svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .route-description {
+            color: #374151;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .route-stats {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .route-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--color-text-light);
+        }
+
+        .route-stat svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .route-highlights {
+            border-top: 1px solid var(--color-border);
+            padding-top: 1rem;
+        }
+
+        .highlights-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlights-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .highlight-tag {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid var(--color-border);
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            background-color: var(--color-bg-gray);
+        }
+
+        .no-routes {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .no-routes p {
+            color: var(--color-text-light);
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Form Styles */
+        .form-section {
+            padding: 3rem 0;
+        }
+
+        .form-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-card {
+                padding: 3rem;
+            }
+        }
+
+        .form-section-group {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .form-section-group:last-child {
+            border-bottom: none;
+        }
+
+        .form-section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.625rem 0.75rem;
+            border: 1px solid var(--color-border);
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+        }
+
+        .form-input.error {
+            border-color: var(--color-error);
+        }
+
+        .error-message {
+            display: block;
+            color: var(--color-error);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            margin-top: 0.25rem;
+            cursor: pointer;
+        }
+
+        .terms-label {
+            font-size: 0.875rem;
+            font-weight: normal;
+        }
+
+        .form-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .form-buttons .btn {
+            flex: 1;
+        }
+
+        /* Success Card */
+        .success-card {
+            background-color: white;
+            padding: 3rem 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .success-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #d1fae5;
+            color: var(--color-success);
+            margin-bottom: 1rem;
+        }
+
+        .success-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .success-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-text {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .success-redirect {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* Info Card */
+        .info-card {
+            background-color: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .info-card-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            font-size: 0.875rem;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        /* References Page */
+        .references-section {
+            padding: 3rem 0;
+        }
+
+        .reference-group {
+            margin-bottom: 3rem;
+        }
+
+        .reference-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .reference-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--color-primary);
+        }
+
+        .reference-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .reference-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .reference-text {
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        #footer {
+            background-color: #111827;
+            color: #d1d5db;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-logo-icon {
+            width: 24px;
+            height: 24px;
+            color: #10b981;
+        }
+
+        .footer-logo span {
+            font-weight: bold;
+            color: white;
+        }
+
+        .footer-description {
+            font-size: 0.875rem;
+        }
+
+        .footer-title {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links,
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li,
+        .footer-contact li {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #10b981;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="navigateTo('home')">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                    <div>
+                        <div class="logo-title">E-Bike Club</div>
+                        <div class="logo-subtitle">Eterna Primavera</div>
+                    </div>
+                </div>
+
+                <nav class="desktop-nav">
+                    <span class="nav-link active" data-page="home" onclick="navigateTo('home')">Home</span>
+                    <span class="nav-link" data-page="routes" onclick="navigateTo('routes')">Routes</span>
+                    <span class="nav-link" data-page="join-us" onclick="navigateTo('join-us')">Join Us</span>
+                    <span class="nav-link" data-page="references" onclick="navigateTo('references')">References</span>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg class="menu-icon" id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon hidden" id="closeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="mobile-nav hidden" id="mobileNav">
+                <span class="mobile-nav-link" data-page="home" onclick="navigateTo('home')">Home</span>
+                <span class="mobile-nav-link" data-page="routes" onclick="navigateTo('routes')">Routes</span>
+                <span class="mobile-nav-link" data-page="join-us" onclick="navigateTo('join-us')">Join Us</span>
+                <span class="mobile-nav-link" data-page="references" onclick="navigateTo('references')">References</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <div id="welcomeMessage" class="welcome-badge hidden"></div>
+                    <h1 class="hero-title">E-Bike Club Eterna Primavera</h1>
+                    <p class="hero-description">
+                        Discover the stunning landscapes of Morelos, Mexico while having fun and staying active. 
+                        Join our community of e-bike enthusiasts exploring beautiful routes together.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="navigateTo('routes')">
+                            Explore Routes
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline" onclick="navigateTo('join-us')">Join the Club</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Why E-Bike with Us?</h2>
+                        <p class="section-description">Experience the perfect combination of exercise, nature, and community</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Electric Assistance</h3>
+                            <p class="feature-description">Enjoy longer rides with less fatigue thanks to electric power assistance</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Beautiful Routes</h3>
+                            <p class="feature-description">Explore stunning trails across Morelos, from colonial towns to mountain peaks</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Community</h3>
+                            <p class="feature-description">Join a friendly group of riders and make new friends who share your passion</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Eco-Friendly</h3>
+                            <p class="feature-description">Reduce your carbon footprint while enjoying outdoor activities</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Morelos Section -->
+            <section class="about-section">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-content">
+                            <h2 class="section-title">The Land of Eternal Spring</h2>
+                            <p class="about-text">
+                                Morelos is known for its perfect year-round climate, earning it the nickname 
+                                "La Tierra de la Eterna Primavera" (The Land of Eternal Spring). With temperatures 
+                                averaging 20-25°C (68-77°F), every day is perfect for an e-bike adventure.
+                            </p>
+                            <p class="about-text">
+                                From the mystical archaeological sites to charming colonial towns, from lush 
+                                forests to volcanic landscapes, Morelos offers incredible diversity in a compact 
+                                area - perfect for exploring on an e-bike.
+                            </p>
+                            <div class="about-ready">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg>
+                                <span>Ready to explore?</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">6+</div>
+                                <div class="stat-label">Scenic Routes</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">150+</div>
+                                <div class="stat-label">Active Members</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">25°C</div>
+                                <div class="stat-label">Average Temp</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Fun Guaranteed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="container cta-content">
+                    <h2 class="cta-title">Ready to Start Your Adventure?</h2>
+                    <p class="cta-description">Join our community today and discover the joy of e-biking through Morelos</p>
+                    <button class="btn btn-primary" style="background-color: white; color: #047857;" onclick="navigateTo('join-us')">
+                        Become a Member
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Routes Page -->
+        <div id="routes-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">Our Routes</h1>
+                    <p class="page-description">
+                        Explore our curated collection of e-bike routes across Morelos. 
+                        Filter by difficulty and distance to find your perfect ride.
+                    </p>
+                </div>
+            </section>
+
+            <section class="filters-section">
+                <div class="container">
+                    <div class="filters-container">
+                        <div class="filters-row">
+                            <div class="filter-group">
+                                <label for="difficultyFilter" class="filter-label">Difficulty Level</label>
+                                <select id="difficultyFilter" class="filter-select">
+                                    <option value="all">All Difficulties</option>
+                                    <option value="Easy">Easy</option>
+                                    <option value="Moderate">Moderate</option>
+                                    <option value="Challenging">Challenging</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label for="distanceFilter" class="filter-label">Distance Range</label>
+                                <select id="distanceFilter" class="filter-select">
+                                    <option value="all">All Distances</option>
+                                    <option value="short">Short (less than 15 km)</option>
+                                    <option value="medium">Medium (15-25 km)</option>
+                                    <option value="long">Long (more than 25 km)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button id="resetFiltersBtn" class="btn btn-outline hidden">Reset Filters</button>
+                    </div>
+
+                    <div class="filter-results">
+                        <p id="filterResultsText"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="routes-section">
+                <div class="container">
+                    <div id="routesGrid" class="routes-grid"></div>
+                    <div id="noRoutesMessage" class="no-routes hidden">
+                        <p>No routes match your filters. Try adjusting your criteria.</p>
+                        <button class="btn btn-primary" onclick="resetAllFilters()">Reset Filters</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Join Us Page -->
+        <div id="join-us-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">Join Our Club</h1>
+                    <p class="page-description">Become part of our e-biking community and start exploring Morelos today!</p>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <div class="container-small">
+                    <div class="form-card" id="registrationForm">
+                        <form id="joinForm">
+                            <!-- Personal Information -->
+                            <div class="form-section-group">
+                                <h2 class="form-section-title">Personal Information</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">First Name <span class="required">*</span></label>
+                                        <input type="text" id="firstName" class="form-input" required>
+                                        <span class="error-message" id="firstNameError"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">Last Name <span class="required">*</span></label>
+                                        <input type="text" id="lastName" class="form-input" required>
+                                        <span class="error-message" id="lastNameError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email <span class="required">*</span></label>
+                                        <input type="email" id="email" class="form-input" required>
+                                        <span class="error-message" id="emailError"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number <span class="required">*</span></label>
+                                        <input type="tel" id="phone" class="form-input" placeholder="+52 777 123 4567" required>
+                                        <span class="error-message" id="phoneError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Riding Information -->
+                            <div class="form-section-group">
+                                <h2 class="form-section-title">Riding Information</h2>
+                                
+                                <div class="form-group">
+                                    <label for="experienceLevel" class="form-label">Experience Level <span class="required">*</span></label>
+                                    <select id="experienceLevel" class="form-select" required>
+                                        <option value="">Select your experience level</option>
+                                        <option value="beginner">Beginner - New to cycling</option>
+                                        <option value="intermediate">Intermediate - Regular cyclist</option>
+                                        <option value="advanced">Advanced - Experienced rider</option>
+                                    </select>
+                                    <span class="error-message" id="experienceLevelError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Preferred Routes (Optional)</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="routes" value="Tepoztlán Magic Town Circuit">
+                                            <span>Tepoztlán Magic Town Circuit</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="routes" value="Lagunas de Zempoala Trail">
+                                            <span>Lagunas de Zempoala Trail</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="routes" value="Cuernavaca Historical Route">
+                                            <span>Cuernavaca Historical Route</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Emergency Contact -->
+                            <div class="form-section-group">
+                                <h2 class="form-section-title">Emergency Contact</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emergencyContact" class="form-label">Contact Name <span class="required">*</span></label>
+                                        <input type="text" id="emergencyContact" class="form-input" required>
+                                        <span class="error-message" id="emergencyContactError"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="emergencyPhone" class="form-label">Contact Phone <span class="required">*</span></label>
+                                        <input type="tel" id="emergencyPhone" class="form-input" required>
+                                        <span class="error-message" id="emergencyPhoneError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Comments -->
+                            <div class="form-section-group">
+                                <div class="form-group">
+                                    <label for="comments" class="form-label">Additional Comments (Optional)</label>
+                                    <textarea id="comments" class="form-textarea" rows="4" placeholder="Tell us anything else you'd like us to know..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="form-section-group">
+                                <label class="checkbox-label terms-label">
+                                    <input type="checkbox" id="agreeToTerms" required>
+                                    <span>I agree to the terms and conditions <span class="required">*</span></span>
+                                </label>
+                                <span class="error-message" id="agreeToTermsError"></span>
+                            </div>
+
+                            <!-- Submit Buttons -->
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Registration</button>
+                                <button type="button" class="btn btn-outline btn-lg" onclick="navigateTo('home')">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="success-card hidden" id="successMessage">
+                        <div class="success-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h2 class="success-title">Welcome to the Club!</h2>
+                        <p class="success-text">
+                            Thank you for joining E-Bike Club Eterna Primavera, <span id="successName"></span>! 
+                            We'll contact you soon with more information about upcoming rides.
+                        </p>
+                        <p class="success-redirect">Redirecting to home page...</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="info-card-title">What happens next?</h3>
+                        <ul class="info-list">
+                            <li>✓ We'll review your registration within 24-48 hours</li>
+                            <li>✓ You'll receive a welcome email with club information</li>
+                            <li>✓ Get access to our ride schedule and exclusive member benefits</li>
+                            <li>✓ Join us on your first group ride!</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- References Page -->
+        <div id="references-page" class="page">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">References & Credits</h1>
+                    <p class="page-description">
+                        This page acknowledges all sources used in the creation of this website.
+                    </p>
+                </div>
+            </section>
+
+            <section class="references-section">
+                <div class="container">
+                    <div class="reference-group">
+                        <div class="reference-header">
+                            <svg class="reference-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            <h2 class="reference-title">Image Sources</h2>
+                        </div>
+                        
+                        <div class="reference-card">
+                            <p class="reference-text">
+                                All photographs used on this website are sourced from Unsplash, a platform 
+                                providing freely usable images.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reference-group">
+                        <div class="reference-header">
+                            <svg class="reference-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                            <h2 class="reference-title">Data Sources</h2>
+                        </div>
+                        
+                        <div class="reference-card">
+                            <p class="reference-text">
+                                Information about Morelos, Mexico sourced from Mexico Tourism Board and local resources.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg class="footer-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        <span>E-Bike Club Eterna Primavera</span>
+                    </div>
+                    <p class="footer-description">Exploring the beautiful landscapes of Morelos, Mexico on electric bikes.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a onclick="navigateTo('home')">Home</a></li>
+                        <li><a onclick="navigateTo('routes')">Routes</a></li>
+                        <li><a onclick="navigateTo('join-us')">Join Us</a></li>
+                        <li><a onclick="navigateTo('references')">References</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>Morelos, Mexico</li>
+                        <li>info@eternaprimavera.com</li>
+                        <li>+52 (777) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 E-Bike Club Eterna Primavera. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   

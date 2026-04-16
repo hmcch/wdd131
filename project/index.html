@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bike Club Eterna Primavera - Home</title>
+    <meta name="description"
+        content="WDD 131 | Dynamic Web Fundamentals: Final project by Héctor Miguel Castro Chávez. HTML, CSS and JS functionalities. Homepage for the E-Bike Club website.">
+    <meta name="author" content="Héctor Miguel Castro Chávez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:,"><!--Its valid HTML5 and prevents browsers to always look for the /favicon.ico.-->
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div>
+                        <div class="logo-title">E-Bike Club</div>
+                        <div class="logo-subtitle">Eterna Primavera</div>
+                    </div>
+                </a>
+                <nav class="desktop-nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="routes.html" class="nav-link">Routes</a>
+                    <a href="contact.html" class="nav-link">Join Us</a>
+                    <a href="referencias.html" class="nav-link">References</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="icon icon-menu" id="menuIcon"></span>
+                    <span class="icon icon-close hidden" id="closeIcon"></span>
+            </div>
+            <nav class="mobile-nav hidden" id="mobileNav">
+                <a href="index.html" class="mobile-nav-link active">Home</a>
+                <a href="routes.html" class="mobile-nav-link">Routes</a>
+                <a href="contact.html" class="mobile-nav-link">Join Us</a>
+                <a href="referencias.html" class="mobile-nav-link">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div id="welcomeMessage" class="welcome-badge hidden"></div>
+                <h1 class="hero-title">E-Bike Club Eterna Primavera</h1>
+                <p class="hero-description">Discover the beautiful landscapes of Morelos, where exercise and fun come
+                    together.</p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why select E-Bike?</h2>
+                    <p class="section-description">Enjoy and experience the triple combination of beautiful scenery,
+                        improving your health, and meeting people who share
+                        your interests.</p>
+                </div>
+            </div>
+            <div class="club-description-section">
+                <div class="container-small">
+                    <p class="main-description">The mission of Club E-Bike Eterna Primavera is to provide an
+                        unforgettable experience that every visitor can fully
+                        enjoy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2 class="section-title">The Land of Eternal Spring.</h2>
+                        <p class="about-text">Morelos is a state located in central Mexico; it is known for having a
+                            warm climate most of the year, with weather
+                            conditions that vary greatly from one region to another.</p>
+                        <p class="about-text">E-Bike Club is strategically located in Cuernavaca, the capital of
+                            Morelos, offering easy access to the rest of the
+                            state and a prime geographical location due to its proximity to Mexico City, Puebla, the
+                            State of Mexico, Tlaxcala,
+                            Querétaro, and Guerrero.</p>
+                    </div>
+                    <section>
+                        <div class="container">
+                            <div class="stats-table-container">
+                                <table class="custom-stats-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Here there are our favorite stats</th>
+                                            <th>From E-Bike Club and also from our location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="stat-value">3</td>
+                                            <td class="stat-label">Routes</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="stat-value">80+</td>
+                                            <td class="stat-label">Members</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="stat-value">23°C</td>
+                                            <td class="stat-label">Average Temp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="stat-value">100%</td>
+                                            <td class="stat-label">Fun</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-content">
+                <a href="routes.html" class="btn btn-primary btn-member">Check the available routes!</a>
+                <h2 class="cta-title">
+                    Ready to Start Your Adventure?
+                </h2>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Héctor Miguel Castro Chávez</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

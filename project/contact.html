@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bike Club Eterna Primavera - Join Us</title>
+    <meta name="description"
+        content="WDD 131 | Dynamic Web Fundamentals: Final project by Héctor Miguel Castro Chávez. HTML, CSS and JS functionalities. Contact page.">
+    <meta name="author" content="Héctor Miguel Castro Chávez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:,"><!--Its valid HTML5 and prevents browsers to always look for the /favicon.ico.-->
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div>
+                        <div class="logo-title">E-Bike Club</div>
+                        <div class="logo-subtitle">Eterna Primavera</div>
+                    </div>
+                </a>
+
+                <nav class="desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="routes.html" class="nav-link">Routes</a>
+                    <a href="contact.html" class="nav-link active">Join Us</a>
+                    <a href="referencias.html" class="nav-link">References</a>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="icon icon-menu" id="menuIcon"></span>
+                    <span class="icon icon-close hidden" id="closeIcon"></span>
+                </button>
+            </div>
+            <nav class="mobile-nav hidden" id="mobileNav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="routes.html" class="mobile-nav-link">Routes</a>
+                <a href="contact.html" class="mobile-nav-link active">Join Us</a>
+                <a href="referencias.html" class="mobile-nav-link">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Join the E-Bike Club</h1>
+                <p class="page-description">Fill out the form to join our cycling community.</p>
+            </div>
+        </section>
+        <section class="form-section">
+            <div class="container-small">
+                <div class="form-card" id="registrationForm">
+                    <form id="joinForm" novalidate>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name <span
+                                        class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="ejemplo@correo.com" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="level" class="form-label">Level of Experience</label>
+                            <select id="level" name="level" class="form-select">
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary btn-member">Submit Form</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="success-card hidden" id="successMessage">
+                    <h2 class="success-title">¡Welcome to the Club!</h2>
+                    <p class="success-text">Thanks for Joining Us, <span id="successName"
+                            style="font-weight: bold;"></span>. We will contact you in less than 24 business hours.</p>
+                    <button class="btn btn-outline" onclick="location.reload()" style="margin-top: 1.5rem;">Send another
+                        inquiry</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Héctor Miguel Castro Chávez</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
