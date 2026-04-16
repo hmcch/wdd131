@@ -118,3 +118,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+const lastModified = document.getElementById("lastModified");
+if (lastModified) {
+    lastModified.textContent = document.lastModified;
+}
