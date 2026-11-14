@@ -1,0 +1,142 @@
+:root {
+    --primary-color: rgba(5, 90, 5, 1.000);
+    /* forest green */
+    --secondary-color: rgba(255, 255, 255, 0.8);
+    /* warm sand background */
+    --accent-color: rgba(255, 255, 255, 1.000);
+    /* white */
+    --accent-color-2: rgba(204, 255, 0, 1);
+    --text-color: rgba(0, 38, 77, 1.000);
+    /* solid dark blue */
+    --overlay-color: rgba(0, 0, 0, 1);
+    /* african turquoise */
+    --overlay-color-2: rgba(189, 214, 239, 1);
+    /* Sensational Light Blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 2rem;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.starting-point {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+}
+
+.website-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#navigation {
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: var(--overlay-color-2);
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navigation-menu.open {
+    display: block;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+.navigation-menu li {
+    border-top: none;
+}
+
+.navigation-menu a {
+    /* display: flex;
+    flex-direction: column; */
+    display: block;
+    list-style: none;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.navigation-menu a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    width: 100%;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 26px;
+}
+
+figure {
+    margin-bottom: 34px;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 15px;
+    color: var(--accent-color);
+}
+
+#lastModified {
+    color: var(--accent-color-2);
+}

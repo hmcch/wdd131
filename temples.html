@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description"
+        content="WDD 131 | Dynamic Web Fundamentals: A temple album by Hector Miguel Castro Chavez. Basic HTML structure (header, main, footer) and JS functionalities.">
+    <meta name="author" content="Hector Miguel Castro Chavez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="preload" as="image" href="images/san-diego-temple-opt.webp" fetchpriority="high">
+    <link rel="icon" href="data:,"><!--Its valid HTML5 and prevents browsers to always look for the /favicon.ico.-->
+    <script src="scripts/temples.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="starting-point">
+            <span class="website-title">Temple Album</span>
+            <button id="navigation" type="button" aria-label="Menu">☰</button>
+        </div>
+
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple" fetchpriority="high">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/benemerito-temple.webp" alt="Benemerito Temple">
+            <figcaption>Benemerito Mexico City Temple</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p class="footer">
+            &copy; <span id="currentyear"></span> 🦅 Héctor Miguel Castro Chávez 🦅 Mexico
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
